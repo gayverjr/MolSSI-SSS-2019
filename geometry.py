@@ -21,6 +21,23 @@ def calculate_distance_list(rA, rB):
     return distance
 
 def build_bond_list(coordinates, max_bond=2.93, min_bond=0):
+    """Build list of bonds from atomic coordinates based on distances.
+
+    Parameters
+    ----------
+    coordinates: np.array
+        An array of atomic coordinates
+    max_bond : float, optional
+        The maximum distance bewteween atoms to be consdiered a bond. Default is 2.93 bohr.
+    min_bond : float, optional
+        The minimum distance between atoms to be considered a bond.
+
+    Returns
+    -------
+    bonds: dict
+        A dictionary with atom pair tuple as keys, bond lengths and values
+    """
+    
     num_atoms = len(coordinates)
     bonds = {}
     for atom1 in range(num_atoms):
