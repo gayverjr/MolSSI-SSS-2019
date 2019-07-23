@@ -20,7 +20,7 @@ def calculate_distance_list(rA, rB):
     distance = np.sqrt(squared_sum)
     return distance
 
-def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
+def build_bond_list(coordinates, max_bond=2.93, min_bond=0):
     num_atoms = len(coordinates)
     bonds = {}
     for atom1 in range(num_atoms):
